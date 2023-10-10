@@ -3,7 +3,7 @@ let preencher = document.getElementById('espaco');
 
 form.addEventListener('submit', function(e) {
     e.preventDefault();
-    const email = form.querySelector('#email').value; // Use 'form' para encontrar os elementos dentro do formulário
+    const email = form.querySelector('#email').value;
     const senha = form.querySelector('#senha').value;
     const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
