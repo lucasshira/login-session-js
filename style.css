@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #3b1148;
+    min-height: 100vh;
+    font-family: sans-serif;
+    display: grid;
+}
+
+section {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 28rem;
+    border: 1px solid;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1.8rem rgba(0, 0, 0, 0.15);
+    padding: 35px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.title {
+    padding: 20px;
+    margin-bottom: 30px;
+    margin-top: -20px;
+}
+
+label {
+    width: 100%;
+    display: block;
+    font-weight: bold; 
+    margin-bottom: 5px;
+}
+
+input {
+    font-size: 1.1875rem;
+    color: #404040;
+    padding: 1rem 0 0.5rem 0;
+    width: 100%;
+    border: none;
+    border-color: #a0a0a0;
+    border-bottom: 1px dotted #a0a0a0;
+    margin-bottom: 2rem;
+    transition: 0.15s linear;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3b1148;
+}
+
+#espaco {
+    margin: 25px 0 25px 0;
+}
+
+form input:focus {
+    outline: 1px solid #3b1148;
+}
+
+
+#enviarBtn {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    transition: 0.25s;
+}
+
+#enviarBtn:hover {
+    background-color: #3b1148;
+    color: #fff;
+}
+
+#email, #senha {
+    padding: 6px;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #3b1148;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+a:hover,
+a:focus {
+    outline: none;
+    color: #000;
+}
+
+a:first-of-type {
+    margin-top: 3px;
+}
+
+a + a {
+    margin-top: 1.125rem;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    section {
+        width: 280px;
+        display: block;
+    }
+}
