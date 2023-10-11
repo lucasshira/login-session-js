@@ -11,7 +11,7 @@ form.addEventListener('submit', function(e) {
         preencher.innerHTML = 'Acesso permitido!';
             setTimeout(function() {
                 window.location.href = 'https://lucasshira.github.io/snake-game/'
-            }, 3000);
+            }, 2000);
     } else if(email === '' && senha === ''){
         preencher.innerHTML = 'Insira um endereço de e-mail e senha.';
     } else if(email !== '' && senha === ''){
