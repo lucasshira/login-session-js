@@ -98,6 +98,7 @@ a:hover,
 a:focus {
     outline: none;
     color: #000;
+    text-decoration: underline;
 }
 
 a:first-of-type {
