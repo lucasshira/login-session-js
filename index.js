@@ -1,5 +1,7 @@
 const form = document.querySelector('#form');
-let preencher = document.getElementById('espaco');
+const erroEmail = document.getElementById('errorEmail');
+const erroSenha = document.getElementById('errorSenha');
+const loading = document.getElementById('loading');
 
 form.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -8,17 +10,30 @@ form.addEventListener('submit', function(e) {
     const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
     if (regexEmail.test(email) && /\d/.test(senha)) {
-        preencher.innerHTML = 'Acesso permitido!';
+        enviarBtn.remove();
+        erroEmail.remove();
+        erroSenha.remove();
+        
+        loading.classList.add('loading-show');
             setTimeout(function() {
                 window.location.href = 'https://lucasshira.github.io/snake-game/'
             }, 2000);
-    } else if(email === '' && senha === ''){
-        preencher.innerHTML = 'Insira um endereço de e-mail e senha.';
-    } else if(email !== '' && senha === ''){
-        preencher.innerHTML = 'Insira uma senha.';
-    } else if(email === '' && senha !== ''){
-        preencher.innerHTML = 'Insira um endereço de e-mail.';
     } else {
-        preencher.innerHTML = 'Preencha os dados com e-mail e senha válidos.'
+
+        if (email === ''){
+            erroEmail.innerHTML = 'Insira um endereço de e-mail.';
+        } else if (!regexEmail.test(email)){
+            erroEmail.innerHTML = 'Insira um e-mail válido.';
+        } else {
+            erroEmail.remove();
+        }
+
+        if (senha === ''){
+            erroSenha.innerHTML = 'Insira uma senha.';
+        } else if (!/\d/.test(senha)) {
+            erroSenha.innerHTML = 'A senha deve conter pelo menos um número.';
+        } else {
+            erroSenha.remove();
+        }
     }
 });
