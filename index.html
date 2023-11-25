@@ -9,15 +9,22 @@
 <body>
     <section id="section">
     <h2 class="title">Faça seu login</h2>
+
     <form id="form">
-        <label for="email">E-mail:</label>
+
+        <label for="email">E-mail</label>
         <input id="email" type="email" placeholder="Informe seu e-mail"><br><br>
-        <label for="senha">Senha:</label>
+        <div id="errorEmail" class="error-message"></div>
+
+        <label for="senha">Senha</label>
         <input id="senha" type="password" placeholder="Informe sua senha">
-        <br><br>
+        <div id="errorSenha" class="error-message"></div>
+
         <button id="enviarBtn">Continuar</button>
+        <div class="loading" id="loading"></div>
+
     </form>
-    <div id="espaco"><br></div> 
+
     <a href="#">Esqueci minha senha</a>
     </section>
     <script src="index.js"></script>
