@@ -35,7 +35,6 @@ label {
     width: 100%;
     display: block;
     font-weight: bold; 
-    margin-bottom: 5px;
 }
 
 input {
@@ -55,12 +54,20 @@ input:focus {
     border-color: #3b1148;
 }
 
-#espaco {
-    margin: 25px 0 25px 0;
+.error-message {
+    font-size: 0.8125rem;
+    color: red;
+    position: relative;
+    margin-top: -1.5rem;
+}
+
+#errorEmail,
+#errorSenha {
+    margin-bottom: 0.5rem;
 }
 
 form input:focus {
-    outline: 1px solid #3b1148;
+    outline: none;
 }
 
 
@@ -72,7 +79,8 @@ form input:focus {
     cursor: pointer;
     padding: 1rem 2rem;
     border-radius: 4px;
-    margin-top: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     transition: 0.25s;
 }
 
@@ -107,6 +115,27 @@ a:first-of-type {
 
 a + a {
     margin-top: 1.125rem;
+}
+
+.loading {
+    display: none;
+    border: 5px solid #3b1148;
+    border-top: 5px solid #f3f3f3;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+    margin: 10px auto 40px;
+    padding: 5px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+.loading-show {
+    display: block;
 }
 
 @media screen and (max-width: 768px) {
